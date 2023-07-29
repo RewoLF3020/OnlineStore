@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'shop.apps.ShopConfig',
     'cart.apps.CartConfig',
     'orders.apps.OrdersConfig',
+    'payment.apps.PaymentConfig',
 ]
 
 MIDDLEWARE = [
@@ -141,3 +142,11 @@ EMAIL_HOST_USER = 'zolotovvladislav305@gmail.com'
 EMAIL_HOST_PASSWORD = 'cnoidguimmhlkdor'
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
+
+
+# Stripe settings
+STRIPE_PUBLISHABLE_KEY = 'pk_test_51NYtIVLPkj3vNf9xzelRKKjkGPDKop5E5vJSQclyalorQUnbLZLWn6v7T28MNe5ZLHIFc3yCF0yCQBy7VBbQPCZv004aldjLzN'
+STRIPE_SECRET_KEY = 'sk_test_51NYtIVLPkj3vNf9xcwdIdazU84buGf7ToI6yAwkgD1NT9pM3ARfJlBQBO186x4S1KzjPX5cKMmcDcEMV8XquIfvq00vObDHrEf'
+STRIPE_API_VERSION = '2022-11-15'
+
+STRIPE_WEBHOOK_SECRET = 'whsec_def799dff4d5ba278108cb6305f64e08ddc16f9c59c4e645151f385c5cfb0977'
