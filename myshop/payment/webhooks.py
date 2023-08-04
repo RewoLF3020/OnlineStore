@@ -4,6 +4,7 @@ from django.http import HttpResponse
 from django.views.decorators.csrf import csrf_exempt
 from orders.models import Order
 from .tasks import payment_completed
+from coupons.models import Coupon
 
 
 @csrf_exempt
@@ -33,6 +34,9 @@ def stripe_webhook(request):
             except Order.DoesNotExist:
                 return HttpResponse(status=404)
             order.paid = True
+            # coupon_id = session.get('coupon_id')
+            # coupon = Coupon.objects.get(id=coupon_id)
+            # coupon.active = False
             # сохранить ИД платежа Stripe
             order.stripe_id = session.payment_intent
             order.save()

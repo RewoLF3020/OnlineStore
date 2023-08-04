@@ -154,3 +154,9 @@ STRIPE_WEBHOOK_SECRET = 'whsec_def799dff4d5ba278108cb6305f64e08ddc16f9c59c4e6451
 
 
 STATIC_ROOT = BASE_DIR / 'static'
+
+
+# Redis settings
+REDIS_HOST = 'localhost'
+REDIS_PORT = 6379
+REDIS_DB = 1
